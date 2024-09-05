@@ -8,8 +8,8 @@ function displayFact() {
     .then((factObj) => {
       const factEl = document.querySelector("#fact");
       // replace cat with mekuri
-      fact = factObj.fact;
-      fact = fact.replace(/(?=cat)\w+/gi, "Mekuri");
+      let fact = factObj.fact;
+      fact = fact.replace(/(cat)|(feline)\w+/gi, "Mekuri");
 
       factEl.textContent = fact;
       displayCatImg();
