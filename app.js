@@ -7,7 +7,11 @@ function displayFact() {
     .then((response) => response.json())
     .then((factObj) => {
       const factEl = document.querySelector("#fact");
-      factEl.textContent = factObj.fact;
+      // replace cat with mekuri
+      fact = factObj.fact;
+      fact = fact.replace(/(?=cat)\w+/gi, "Mekuri");
+
+      factEl.textContent = fact;
       displayCatImg();
     });
 }
