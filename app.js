@@ -9,7 +9,7 @@ function displayFact() {
       const factEl = document.querySelector("#fact");
       // replace cat with mekuri
       let fact = factObj.fact;
-      fact = fact.replace(/(cat)|(feline)\w+/gi, "Mekuri");
+      fact = fact.replace(/\bcat(s)?\b|\bfeline(s)?\b/gi, "Mekuri");
 
       factEl.textContent = fact;
       displayCatImg();
